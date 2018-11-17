@@ -12,14 +12,13 @@ module.exports = function chatBot () {
     bot.on('message', (msg) => {
         const chatId = msg.chat.id;
         var message = msg.text.toString();
-        // console.log(typeof message)
-        console.log('message-------', message,chatId)
+        
         if(message === '/start' || message.length === 0) {
             bot.sendMessage(chatId, 'Hi! please send me the word you want to know');    
         } else {
             let checkNoSpace = noSpace(message)
             let checkNoQuestion = noQuestion(message)
-            // console.log('no question------', checkNoQuestion, 'no space-----', checkNoSpace)
+
             if (!checkNoQuestion && !checkNoSpace) {
                 axios({
                     url: `https://dictionaryapi.com/api/v3/references/sd2/json/${message}?key=${process.env.MWKEY}`
