@@ -25,7 +25,7 @@ module.exports = function chatBot () {
                 })
                     .then(({data}) => {
                         let initialData = data.tuc
-                        if(initialData) {
+                        if(initialData && initialData.length > 0) {
                             let initialDefinition = {}
                             let responses = ''
                             if(initialData[0].meanings) {
