@@ -11,8 +11,8 @@ const validateWord = require('../helpers/validateWord')
 module.exports = function chatBot () {
     bot.on('message', (msg) => {
         const chatId = msg.chat.id;
-        var message = msg.text.toString();
-        
+        let message = msg.text.toString().toLowerCase();
+
         if(message === '/start' || message.length === 0) {
             bot.sendMessage(chatId, 'Hi! please send me the word you want to know');    
         } else {
