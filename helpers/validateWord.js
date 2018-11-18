@@ -20,8 +20,4 @@ function validateWord(input){
     }
 } 
 
-// console.log(validateWord('air'))
-// console.log(validateWord('air conditioner'))
-// console.log(validateWord('air conditioner system'))
-
 module.exports = validateWord
