@@ -1,5 +1,5 @@
 'use strict'
-
+/* istanbul ignore file */
 process.env["NTBA_FIX_319"] = 1;
 const Telegram = require('node-telegram-bot-api')
 const axios = require('axios')
